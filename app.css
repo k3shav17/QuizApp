@@ -15,7 +15,6 @@ h1,
 h2,
 h3,
 h4 {
-
   margin-bottom: 1rem;
 }
 
@@ -43,8 +42,8 @@ h3 {
 /*Utilities*/
 
 .container {
-  width: 100ww;
-  height: 100wh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
