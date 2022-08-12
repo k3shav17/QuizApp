@@ -13,12 +13,14 @@ let questionCounter = 0;
 let availableQuestions = [];
 let questions = [];
 
+// https://the-trivia-api.com/api/questions?categories=general_knowledge&limit=15&difficulty=easy
+//
 fetch('https://opentdb.com/api.php?amount=10&category=9&type=multiple')
   .then(res => {
     return res.json();
   })
   .then(loadedQuestions => {
-    console.log(loadedQuestions.results);
+    console.log(loadedQuestions);
     questions = loadedQuestions.results.map(loadedQuestion => {
       const formattedQuestion = {
         question: loadedQuestion.question,
@@ -45,7 +47,7 @@ fetch('https://opentdb.com/api.php?amount=10&category=9&type=multiple')
 
 // constants
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 10;
 
 startGame = () => {
   availableQuestions = 0;
